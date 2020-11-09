@@ -82,7 +82,7 @@ function createFilmDetailPage(film) {
 }
 
 const router = createRouter()
-  .get('filmoteka/', (req, context) => {
+  .get('/filmoteka', (req, context) => {
     createHomepageMarkup();
     const formRef = document.querySelector('.search-form');
     formRef.addEventListener('submit', searchFilm);

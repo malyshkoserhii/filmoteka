@@ -15,11 +15,8 @@
 .site-navigation {
   display: flex;
 
-  &__item {
-    margin-right: 25px;
-  }
-
   &__link {
+    width: 122px;
     display: block;
     color: #372c48;
     font-size: 16px;

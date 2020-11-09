@@ -52,6 +52,9 @@ function getFilmInRequest(title) {
   if (!filmsArray) {
     return;
   }
+  if (!filmsArrayFromPagination) {
+    return;
+  }
   if (filmService.pageStatus === 1) {
     let filteredFilm = filmsArray.find(el => {
       return el.title === filmName;
@@ -79,7 +82,7 @@ function createFilmDetailPage(film) {
 }
 
 const router = createRouter()
-  .get('/', (req, context) => {
+  .get('filmoteka/', (req, context) => {
     createHomepageMarkup();
     const formRef = document.querySelector('.search-form');
     formRef.addEventListener('submit', searchFilm);

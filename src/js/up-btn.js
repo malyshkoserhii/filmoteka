@@ -1,9 +1,9 @@
-function upBtnCreate () {
-    const upBtnRef = document.querySelector('.up-btn-link');
+function upBtnCreate() {
+  const upBtnRef = document.querySelector('.up-btn-link');
 
   const onEntry = (entries, observer) => {
     entries.forEach(entry => {
-           if (!entry.isIntersecting) {
+      if (!entry.isIntersecting) {
         upBtnRef.classList.remove('up-btn-hidden');
       } else {
         upBtnRef.classList.add('up-btn-hidden');
@@ -15,7 +15,7 @@ function upBtnCreate () {
   };
   const io = new IntersectionObserver(onEntry, options);
 
-  const formRef = document.querySelector('.search-form');
+  const formRef = document.querySelector('.header');
   io.observe(formRef);
 
   function upToStartPage(event) {
@@ -25,4 +25,4 @@ function upBtnCreate () {
   upBtnRef.addEventListener('click', upToStartPage);
 }
 
-export default upBtnCreate
+export default upBtnCreate;

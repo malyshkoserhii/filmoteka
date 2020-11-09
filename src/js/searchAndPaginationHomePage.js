@@ -16,6 +16,7 @@ function showFilms() {
   const wrongInputNotification = document.querySelector(
     '.wrong-input-notification',
   );
+  const counterRef = document.querySelector('#counter');
   const incrementBtnRef = document.querySelector(
     "button[data-counter='increment']",
   );
@@ -26,13 +27,12 @@ function showFilms() {
       findAndReplaceDamagedImage(data);
       sliceDate(data.results);
       createHomepageFilmGalleryMarkup(data.results);
-      const counterRef = document.querySelector('#counter');
       counterRef.classList.remove('display-none');
 
       window.history.pushState(
         '',
         '',
-        `?query=${filmService.query}&page=${filmService.pageStatus}`,
+        `filmoteka/?query=${filmService.query}&page=${filmService.pageStatus}`,
       );
 
       wrongInputNotification.textContent = '';
@@ -43,7 +43,7 @@ function showFilms() {
       ) {
         counterRef.classList.add('display-none');
         wrongInputNotification.textContent =
-          'Please enter a more specific query';
+          'We have no found films for you :(';
         return;
       }
       if (data.total_pages === 1) {
@@ -59,8 +59,12 @@ function searchFilm(event) {
   event.preventDefault();
 
   const filmsRef = document.querySelector('.gallery-list');
+  const counterRef = document.querySelector('#counter');
   const incrementBtnRef = document.querySelector(
     "button[data-counter='increment']",
+  );
+  const wrongInputNotification = document.querySelector(
+    '.wrong-input-notification',
   );
 
   const form = event.currentTarget;
@@ -69,7 +73,7 @@ function searchFilm(event) {
   window.history.pushState(
     '',
     '',
-    `?query=${filmService.query}&page=${filmService.pageStatus}`,
+    `filmoteka/?query=${filmService.query}&page=${filmService.pageStatus}`,
   );
 
   if (filmService.searchQuery === '') {

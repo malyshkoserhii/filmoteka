@@ -32,7 +32,7 @@ function showFilms() {
       window.history.pushState(
         '',
         '',
-        `filmoteka?query=${filmService.query}&page=${filmService.pageStatus}`,
+        `?query=${filmService.query}&page=${filmService.pageStatus}`,
       );
 
       wrongInputNotification.textContent = '';
@@ -73,7 +73,7 @@ function searchFilm(event) {
   window.history.pushState(
     '',
     '',
-    `filmoteka?query=${filmService.query}&page=${filmService.pageStatus}`,
+    `?query=${filmService.query}&page=${filmService.pageStatus}`,
   );
 
   if (filmService.searchQuery === '') {

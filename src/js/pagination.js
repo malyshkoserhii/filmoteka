@@ -28,7 +28,7 @@ function filmPagination() {
         window.history.pushState(
           '',
           '',
-          `filmoteka?query=${filmService.query}&page=${filmService.pageStatus}`,
+          `?query=${filmService.query}&page=${filmService.pageStatus}`,
         );
 
         if (filmService.pageStatus < data.total_pages) {
@@ -59,7 +59,7 @@ function filmPagination() {
         window.history.pushState(
           '',
           '',
-          `filmoteka?query=${filmService.query}&page=${filmService.pageStatus}`,
+          `?query=${filmService.query}&page=${filmService.pageStatus}`,
         );
 
         if (filmService.pageStatus === 1) {

@@ -82,7 +82,7 @@ function createFilmDetailPage(film) {
 }
 
 const router = createRouter()
-  .get('/', (req, context) => {
+  .get('/filmoteka', (req, context) => {
     createHomepageMarkup();
     const formRef = document.querySelector('.search-form');
     formRef.addEventListener('submit', searchFilm);
@@ -99,19 +99,19 @@ const router = createRouter()
     filmPagination();
     req.stop();
   })
-  .get('/library', (req, context) => {
+  .get('/filmoteka/library', (req, context) => {
     createLibraryMarkup();
     savedChoice();
     req.stop();
   })
-  .get('/library/watched', (req, context) => {
+  .get('/filmoteka/library/watched', (req, context) => {
     toggleButtonStyleinLibrary();
     localStorage.setItem('focused', 'watch');
     savedChoice();
     createWatchMarkup();
     req.stop();
   })
-  .get('/library/queue', (req, context) => {
+  .get('/filmoteka/library/queue', (req, context) => {
     createLibraryMarkup();
     toggleButtonStyleinLibrary();
     localStorage.setItem('focused', 'queue');

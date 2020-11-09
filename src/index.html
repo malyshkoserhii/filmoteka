@@ -7,33 +7,31 @@
   <title>Filmoteka.Hakaton-js. GoIT</title>
 </head>
   <body>
-    <div class="container wrapper">
       <header class="header">
         <nav class="header__nav">
           <div class="logo">
-            <img src="images/icon-filmoteka.png" />
-            <a href="/">
-              <i class="fa fa-film"></i>
+            <a href="/filmoteka" class="logo__link">
+              <img src="images/icon-filmoteka.png" class="logo__link--image" />
+              <!-- <i class="fa fa-film"></i> -->
               <span class="span">Filmoteka</span>
             </a>
           </div>
           <ul class="site-navigation">
             <li class="site-navigation__item home-wrapper-js active">
-              <a href="/" class="site-navigation__link home-js">Home</a>
+              <a href="/filmoteka" class="site-navigation__link home-js">Home</a>
             </li>
             <li class="site-navigation__item library-wrapper-js ">
-              <a href="/library" class="site-navigation__link">My library</a>
+              <a href="/filmoteka/library" class="site-navigation__link">My library</a>
             </li>
           </ul>
         </nav>
       </header>
-      <main class="main-js"></main>
+      <main class="main-js main"></main>
       <footer class="footer">
         <div class="footer-copyright">Цей сайт створений із навчальною метою та не має на меті комерційне використання контенту. API надано сервісом <a href="https://developers.themoviedb.org/3/authentication/how-do-i-generate-a-session-id" class="api">The Movie Database API</a></div>
         <a href="#scroll" class="up-btn-link up-btn-hidden">
         <img class="up-btn-img" src="./images/up-arrow.png" alt="up-arrow" width="50" height="50"> 
       </a>
       </footer>
-    </div>
   </body>
 </html>

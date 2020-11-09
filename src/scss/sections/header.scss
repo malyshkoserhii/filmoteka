@@ -1,22 +1,33 @@
 .header {
+  width: 100%;
   color: #372c48;
   font-size: 20px;
   font-family: Roboto-Medium, sans-serif;
   background: #76c0ba;
+  padding: 22px 12px 10px 20px;
 
   &__nav {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+
+    @media (min-width: 768px) {
+      justify-content: space-between;
+      padding: 0px 30px 0 32px;
+    }
   }
 }
 
 .site-navigation {
   display: flex;
+  justify-content: flex-start;
+
+  &__item {
+    width: 122px;
+  }
 
   &__link {
-    width: 122px;
     display: block;
     color: #372c48;
     font-size: 16px;
@@ -31,20 +42,22 @@
 }
 
 .logo {
-  margin-left: 20px;
-  margin-right: 60px;
-  padding: 24px 0 24px 20px;
   letter-spacing: 1px;
+
+  &__link {
+    @media (min-width: 768px) {
+      display: flex;
+      width: 128px;
+    }
+
+    &__link--image {
+      display: block;
+    }
+  }
 
   @media (min-width: 768px) {
     display: flex;
-    margin-right: 376px;
-    padding: 24px 0 24px 34px;
-  }
-
-  @media (min-width: 1024px) {
-    margin-left: 2px;
-    margin-right: 596px;
+    padding: 24px 0 24px;
   }
 }
 

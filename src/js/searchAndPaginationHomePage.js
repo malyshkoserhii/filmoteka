@@ -32,7 +32,7 @@ function showFilms() {
       window.history.pushState(
         '',
         '',
-        `?query=${filmService.query}&page=${filmService.pageStatus}`,
+        `/filmoteka?query=${filmService.query}&page=${filmService.pageStatus}`,
       );
 
       wrongInputNotification.textContent = '';
@@ -43,7 +43,7 @@ function showFilms() {
       ) {
         counterRef.classList.add('display-none');
         wrongInputNotification.textContent =
-          'We have no found films for you :(';
+          'We have not found films for you :(';
         return;
       }
       if (data.total_pages === 1) {
@@ -73,7 +73,7 @@ function searchFilm(event) {
   window.history.pushState(
     '',
     '',
-    `?query=${filmService.query}&page=${filmService.pageStatus}`,
+    `/filmoteka?query=${filmService.query}&page=${filmService.pageStatus}`,
   );
 
   if (filmService.searchQuery === '') {

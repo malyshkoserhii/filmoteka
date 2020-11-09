@@ -119,12 +119,7 @@ const router = createRouter()
     createQueueMarkup();
     req.stop();
   })
-  .get('/library/watched/:title', (req, context) => {
-    const title = req.get('title');
-    getFilmInRequest(title);
-    req.stop();
-  })
-  .get('/library/queue/:title', (req, context) => {
+  .get('/:title', (req, context) => {
     const title = req.get('title');
     getFilmInRequest(title);
     req.stop();

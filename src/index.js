@@ -1,4 +1,3 @@
-import './styles.css';
 import './scss/base.scss';
 import './js/searchAndPaginationHomePage';
 import './js/renderLibrary';
